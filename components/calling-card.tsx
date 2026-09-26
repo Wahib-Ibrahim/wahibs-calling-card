@@ -1,10 +1,10 @@
-import { Mail } from 'lucide-react'
+import { CardActions } from '@/components/card-actions'
 
 const EMAIL = 'Wahibi.ibrahimi@gmail.com'
 
 export function CallingCard() {
   return (
-    <article className="w-full max-w-xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+    <article className="w-full max-w-xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm animate-in fade-in slide-in-from-bottom-3 duration-700 ease-out motion-reduce:animate-none">
       <div className="h-2 bg-primary" aria-hidden="true" />
       <div className="flex flex-col gap-8 p-8 sm:p-12">
         <header className="flex flex-col gap-2">
@@ -24,13 +24,14 @@ export function CallingCard() {
           <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
             Get in touch
           </h2>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="inline-flex w-fit items-center gap-3 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
-          >
-            <Mail className="size-5" aria-hidden="true" />
-            <span className="break-all">{EMAIL}</span>
-          </a>
+          <CardActions
+            name="Wahib Ibrahim"
+            firstName="Wahib"
+            lastName="Ibrahim"
+            title="College Student"
+            organization="Kennesaw State University"
+            email={EMAIL}
+          />
         </footer>
       </div>
     </article>
