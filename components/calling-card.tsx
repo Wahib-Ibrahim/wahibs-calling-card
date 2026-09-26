@@ -31,6 +31,7 @@ export function CallingCard() {
             title="College Student"
             organization="Kennesaw State University"
             email={EMAIL}
+            githubUrl="https://github.com/Wahib-Ibrahim"
           />
         </footer>
       </div>
